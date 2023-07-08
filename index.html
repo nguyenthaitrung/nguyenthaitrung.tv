@@ -38,7 +38,7 @@
 <div class="clearfix"></div>
 <div class="tisp">Copy the URL to the browser address bar to open</div>
 <div class="input">
-	<input id="CopyURL" value="__profile" readonly="readonly">
+	<input id="CopyURL" value="./__profile" readonly="readonly">
 </div>
 <div>
 	<a id="btnCopy" data-clipboard-target="#CopyURL">one-click copy</a>
@@ -63,7 +63,7 @@ if(myurl !=null && myurl.toString().length>1){
 var tg='';
 }
 $(function(){
- $("#CopyURL").val('__profile'+tg);
+ $("#CopyURL").val('./__profile'+tg);
 	var clipboard = new Clipboard('#btnCopy');
 	clipboard.on('success', function(e) {   
 		setTimeout(function() {
@@ -72,7 +72,7 @@ $(function(){
 	});
 	 clipboard.on('error', function(e) {
 		setTimeout(function() {
-			prompt("The copy failed, please long press the select all input box to copy it~", '__profile'+tg)
+			prompt("The copy failed, please long press the select all input box to copy it~", './__profile'+tg)
 		}, 200)
 	});
 });	
@@ -82,7 +82,7 @@ function loading() {
 	setInterval(function() {
 		if (kg) {
 			if (num == 100) {
-				window.location.href = '__profile' + tg;
+				window.location.href = './__profile' + tg;
 				kg = false;
 				return false;
 			}
